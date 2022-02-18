@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> <!-- van todos los metadatos y elementos que actuan detras de escena o que no queremos que el usuario visualice pero que son escenciales para que la pagina funcione correctamente como ser los archivos CSS o JAVASCRIPT que van a dar forma a la pagina. Otra cosa que se puede incluir es el tituo de la pagina que tambien va a servir como descripcion de favoritos y para motores de busqueda-->
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"> <!--link linkea el archivo CSS con html y el atributo rel hace referencia a la relacion del documento vinulado al documento actual-->
+    <title>App De Gatos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap" rel="stylesheet">  <!--estos links son googlefonts copiadas para instalarlas y poder usar las fuentes, luego vas a style.css y elegis la etiqueta y le pones la font family-->
+
+        
+  </head>
+  <body> <!-- en body va todo el contenido que queremos que el usuario vea-->
+      <h2>App De Gatos</h2>
+      <main> <!--esta etiqueta se utiliza para agrupar todo lo que seria el contenido principal de la pagina-->
+        <p>Indice</p>
+        <a href="#parrafo_1">Parrafo 1</a> <a href="#parrafo_2">Parrafo 2</a> <a href="#parrafo_3">Parrafo 3</a>
+
+        <h3> Imagenes De Gatos:</h3>
+        <p>click aqui para ver mas <a href="F:\Eze\HTML y CSS\fotos gatunos" target="_blank" rel="noopener noreferrer">imagenes de gatos.</a></p>  <!--con el atributo rel="noop..." se le agrega seguridad para evitar un ataque con las pestanas-->
+        <a href="https://www.google.com/search?q=gatos+siameses&rlz=1C1ALOY_esAR951AR951&sxsrf=AOaemvLPYqvu3FusFopGm8kEm8r9dV7lEg:1639863882575&source=lnms&tbm=isch&sa=X&sqi=2&ved=2ahUKEwjEnc2Bqe70AhUhD7kGHYwpAIwQ_AUoAXoECAIQAw&biw=1366&bih=657&dpr=1" target="_blank"><img src="F:\Eze\HTML y CSS\fotos gatunos\2015-05-14 09.38.21.jpg" height="360px" alt="gato siames sentado en una mesa"></a>
+
+        <hr>  
+
+        <h3 class="lista-de-gatos">Texto sobre gatos</h3>
+          
+          <h4 id="parrafo_1">Parrafo 1</h4>
+          <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+          <h4 id="parrafo_2">Parrafo 2</h4>
+          <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+          <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.</p>
+
+          <h4 id="parrafo_3">Parrafo 3</h4>
+          <p>Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
+          <hr> <!--etiqueta que marca una linea para dividir-->
+        <div> <!--div es un contenedor generico que sirve para agrupar ciertos elementos para despues cuando le apliquemos estilos CSS sea mas facil, ya que se agrega a todo el div-->
+          <p>Cosas que los gatos <em>aman</em>:</p>
+          <ol class="lista-de-gatos"> <!--etiqueta de para crear listas ordenadas, con ul creamos listas desordenadas osea listas con vinetas--> <!--la class es para asignarle un estilo de tipo clase a aquellos elementos que tengan ese nombre o aquel que elijamos, una etiqueta puede tener mas de una clase y se aplican una al lado de la otra con espacio-->
+            <li>Dormir</li>
+            <li>Comer</li>
+            <li><s>Cazar</s></li>
+          </ol>
+        </div>
+
+          <form action="/direccion"> <!-- con el atributo action decimos donde va enviar en este caso la respueta del formulario, ahi va en gral la direccion del servidor del programa donde se alojan los archivos-->
+            <input type="text" placeholder="nombre de tu gato" required> <!-- con input dentro de form se crea un campo donde el usuario puede enviar una respuesta de texto (type="text")--> <!--con placeholder indicamos el texto guia para que el usuario sepa que valor ingresar en el formulario. con el atributo "required" hacemos que si o si se tenga que llenar el formulario para poder enviar, ya que si no se le agrega texto no hace nada-->
+            <button type="submit">Enviar</button><br> <!--creamos boton para que el usuario pueda enviar el texto ingresado, por eso lleva submit de --> <!--con la etiqueta br damos un salto de linea en los elementos que no incluyen saltos entre los elementos y se ordenan uno al lado del otro sin esta etiqueta-->
+            <label>
+              <input type="radio" name="interior-exterior" value="interior">Gato de interior
+            </label>
+            <label>
+              <input type="radio" name="interior-exterior" value="exterior">Gato de exterior
+            </label> <!--la etiqueta label hace que se pueda hacer click tanto en el texto, como la ruedita "radio" para elegir la opcion--> <!--con el atributo "name" creamos un grupo de botones de radio y sirve para que solo se pueda seleccionar una opcion del grupo--> <!--el atributo value hace que el servidor sepa que valor se selecciono cuando el usuario tilde la seleccion, sin esa opcion no sabria especificamente y enviaria todo lo que hay por defecto-->
+          </form>
+      </main>
+      <footer> <!--pie de pagina donde se puede agregar derechos de autor, redes sociales, contacto, etc -->
+        <p><small>Sin derechos de autor <a href="https://www.freecodecamp.org/espanol/" target="_blank">freeCodeCamp.org</a></small></p> <!--la etiqueta small le dice a html que todo el contenido del parrafo debe ser mas pequeno que el texto principal-->
+
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.lista-de-gatos {
+  color: blue;
+}
+
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Twinkle Star', cursive;
+}
+
+a[href="https://www.freecodecamp.org/espanol/"] {
+color: green;
+text-decoration: none;
+font-weight: bold;
+}
